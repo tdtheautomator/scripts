@@ -1,7 +1,7 @@
 ﻿$original_path = Get-Location
 $target_path = "./ref-codes"
 $cmd_exec = "git pull"
-$folders = Get-ChildItem -path $base_path -Directory
+$folders = Get-ChildItem -path $target_path -Directory
 $folders | ForEach-Object { 
                             Write-Host processing $_.Name in $target_path -ForegroundColor Yellow
                             Set-Location $_.FullName ; 
